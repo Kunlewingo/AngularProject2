@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+/* Set a global background color for the whole app */
+body {
+    background-color: #52cdee;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10;
+    padding: 10;
+    color: #151471;
+  }
+  
+  
