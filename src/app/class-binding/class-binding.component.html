@@ -1,0 +1,21 @@
+<!-- class-binding.component.html -->
+<div class="static-box">
+    I always have the 'static-box' class (static class binding).
+  </div>
+  
+  <div [class.active]="isActive">
+    I get the 'active' class when isActive=true (conditional binding).
+  </div>
+  
+  <div [class.error]="hasError">
+    I get the 'error' class when hasError=true.
+  </div>
+  
+  <div [class]="statusClass">
+    My class list comes from the statusClass string property.
+  </div>
+  
+  <div [ngClass]="dynamicClasses">
+    I have classes based on the dynamicClasses object (uses ngClass).
+  </div>
+  

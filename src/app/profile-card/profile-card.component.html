@@ -1,0 +1,55 @@
+<div 
+  class="card-container"
+  [ngStyle]="{
+    'background-color': cardBgColor,
+    'font-style': fontStyle
+  }"
+  style="padding: 16px; border-radius: 8px; width: 300px;"
+>
+  <img 
+    [src]="profileImageUrl"
+    [style.width.px]="150"
+    [style.height.px]="150"
+    [style.marginBottom.px]="10"
+    [style.border]="imageBorder ? '3px solid #333' : 'none'"
+    style="border-radius: 50%;"
+  >
+
+  <h2>{{ profileName }}</h2>
+
+  <input 
+    type="text"
+    [(ngModel)]="profileName"
+    placeholder="Update name"
+    style="width: 100%; margin-bottom: 10px;"
+  >
+
+  <div *ngIf="bioVisible">
+    <p 
+      [style.fontSize.px]="bioFontSize"
+      style="margin-bottom: 10px;"
+    >
+      {{ bio }}
+    </p>
+  </div>
+
+  <input 
+    type="number"
+    [(ngModel)]="bioFontSize"
+    placeholder="Bio Font Size (px)"
+    style="width: 100%; margin-bottom: 10px;"
+  >
+
+  <button (click)="toggleCardColor()" style="margin-right: 10px;">
+    Toggle Card Color
+  </button>
+
+  <button (click)="toggleBioVisibility()">
+    {{ bioVisible ? 'Hide' : 'Show' }} Bio
+  </button>
+
+  <div style="margin-top: 10px;">
+    <label for="imageUpload">Upload Image:</label>
+    <input type="file" id="imageUpload" (change)="onImageUpload($event)">
+  </div>
+</div>

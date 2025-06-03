@@ -8,6 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { StudentProfileComponent } from './student-profile/student-profile.component';
+import { FormsModule } from '@angular/forms';
+import { ClassBindingComponent } from './class-binding/class-binding.component';
+import { NewAppComponent } from './new-app/new-app.component';
+import { ProfileCardComponent } from './profile-card/profile-card.component';
 
 @NgModule({
     declarations: [
@@ -15,10 +19,14 @@ import { StudentProfileComponent } from './student-profile/student-profile.compo
         HeaderComponent,
         ContentComponent,
         FooterComponent,
-        StudentProfileComponent
+        StudentProfileComponent,
+        ClassBindingComponent,
+        NewAppComponent,
+        ProfileCardComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        FormsModule
     ],
     providers: [],
     bootstrap: [AppComponent]

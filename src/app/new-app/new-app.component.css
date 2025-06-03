@@ -1,0 +1,13 @@
+.danger{
+    background-color: red;
+}
+.active {
+  font-weight: bold;
+}
+.highlight {
+  background-color: yellow;
+}
+.dark-theme {
+  background-color: #333;
+  color: white;
+}

@@ -1,0 +1,49 @@
+
+<button [class.danger]="isError" (click)="toggleClass()">touch
+</button>
+<p [class.danger]="isError">Change styling</p>
+<div [ngClass]="{
+    'active':isActive, 'highlight':isHighlight, 'dark-theme':isDark
+    
+}">
+    userdashboard
+    
+    <div>
+        <p [style.color]="isError ? 'red' : 'green'">
+  Status message area for testing binding in Angular framework
+
+</p>
+    </div>
+</div>
+<div [style.width.px]="boxWidth" [style.height.%]="boxHeight">
+  Dynamic Box
+</div>
+
+<div [ngStyle]="dynamicStyles">
+  Styled with ngStyle - denoting how to style using ngStyle
+</div>
+<button
+  [style.background-color]="isActive ? 'green' : 'gray'"
+  [style.color]="'white'"
+  [style.border]="isActive ? '2px solid darkgreen' : '2px dashed gray'"
+>
+  {{ isActive ? 'Active' : 'Inactive' }}
+</button>
+
+<div
+  [ngStyle]="{
+    'font-size.px': isLargeText ? 18 : 14,
+    'margin.px': 10,
+    'opacity': isDisabled ? 0.5 : 1
+  }"
+>
+  Conditional block
+</div>
+<button (click)="sayHello()">Click Me</button>
+<input (input)="onInputChange($event)">
+<p>You typed: {{ userInput }}</p>
+<button (click)="onButtonClick()">Click me</button>
+<p>You have clicked {{ count }} times.</p>
+
+<input type="text" (input)="onNameInput($event)" placeholder="Enter your name">
+<p>Hello, {{ name }}!</p>
