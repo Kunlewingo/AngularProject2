@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { NewAppComponent } from './new-app/new-app.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
     declarations: [
@@ -22,7 +23,8 @@ import { ProfileCardComponent } from './profile-card/profile-card.component';
         StudentProfileComponent,
         ClassBindingComponent,
         NewAppComponent,
-        ProfileCardComponent
+        ProfileCardComponent,
+        UserProfileComponent
     ],
     imports: [
         BrowserModule,

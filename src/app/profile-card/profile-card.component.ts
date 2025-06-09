@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile-card.component.css']
 })
 export class ProfileCardComponent {
+  
   profileName: string = 'Ayokunle Taiwo Owoseni';
   bio: string = 'My name is Ayokunle, an aspiring programmer.';
   profileImageUrl: string = 'https://via.placeholder.com/150';
@@ -14,6 +15,7 @@ export class ProfileCardComponent {
   bioVisible: boolean = true;
   bioFontSize: number = 14;
   imageBorder: boolean = false;
+  
 
   toggleCardColor() {
     this.cardBgColor = this.cardBgColor === 'lightblue' ? 'lightcoral' : 'lightblue';
@@ -23,6 +25,7 @@ export class ProfileCardComponent {
     this.bioVisible = !this.bioVisible;
   }
 
+  
   onImageUpload(event: any) {
     const file = event.target.files[0];
     if (file) {
@@ -32,6 +35,9 @@ export class ProfileCardComponent {
       };
       reader.readAsDataURL(file);
       this.imageBorder = true;
+      
     }
+    
   }
+  
 }

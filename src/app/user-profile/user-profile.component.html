@@ -1,0 +1,40 @@
+<div class="form-container">
+  <h2>User Profile</h2>
+  <form>
+    <label>Full Name:
+      <input type="text" [(ngModel)]="fullName" name="fullName" />
+    </label>
+
+    <label>Email:
+      <input type="email" [(ngModel)]="email" name="email" />
+    </label>
+
+    <label>Age:
+      <input type="number" [(ngModel)]="age" name="age" />
+    </label>
+
+    <div class="gender">
+      Gender:
+      <label><input type="radio" [(ngModel)]="gender" name="gender" value="Male" /> Male</label>
+      <label><input type="radio" [(ngModel)]="gender" name="gender" value="Female" /> Female</label>
+    </div>
+
+    <label>
+      <input type="checkbox" [(ngModel)]="subscribed" name="subscribed" /> Subscribe to newsletter
+    </label>
+
+    <div class="buttons">
+      <button type="button" (click)="submitForm()">Submit</button>
+      <button type="button" (click)="resetForm()">Reset</button>
+    </div>
+  </form>
+
+  <div class="preview">
+    <h3>Live Preview</h3>
+    <p><strong>Full Name:</strong> {{ fullName }}</p>
+    <p><strong>Email:</strong> {{ email }}</p>
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Gender:</strong> {{ gender }}</p>
+    <p><strong>Subscribed:</strong> {{ subscribed ? 'Yes' : 'No' }}</p>
+  </div>
+</div>
