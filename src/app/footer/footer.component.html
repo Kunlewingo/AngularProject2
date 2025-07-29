@@ -1,4 +1,9 @@
 <footer class="bg-light text-center py-3 mt-5">
     <p>&copy; 2025 My Angular App. All rights reserved.</p>
   </footer>
-  
+  <h2>Available Products</h2>
+<ul>
+  <li *ngFor="let product of products">
+    {{ product.name }} - ${{ product.price }}
+  </li>
+</ul>

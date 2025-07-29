@@ -13,6 +13,9 @@ import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { NewAppComponent } from './new-app/new-app.component';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { TextColorDirective } from './text-color.directive';
+import { MessageSenderComponent } from './components/message-sender/message-sender.component';
+import { MessageListComponent } from './components/message-list/message-list.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +27,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
         ClassBindingComponent,
         NewAppComponent,
         ProfileCardComponent,
-        UserProfileComponent
+        UserProfileComponent,
+        TextColorDirective,
+        MessageSenderComponent,
+        MessageListComponent
     ],
     imports: [
         BrowserModule,

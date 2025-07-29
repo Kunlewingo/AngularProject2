@@ -1,3 +1,13 @@
+
+<div [ngClass]="{'highlight': isActive}">Hello</div>
+<p class="highlight">good</p>
+<div [ngStyle]="{'color': textColor, 'font-size': fontSize}">Styled Text</div>
+<button (click)="changeStyle()">Change Style</button>
+<li *ngFor="let item of items; let i = index">{{ i }} - {{ item }}</li>
+
+<div *ngIf="isLoggedIn">Welcome Back!</div>
+
+
 <div 
   class="card-container"
   [ngStyle]="{
@@ -58,3 +68,25 @@
     <button>Search</button>
 </div>
 <div class="ekart-search-result-for"><p><strong>Search result for: </strong>Mens wear</p></div>
+<div *ngIf="isLoggedIn">Welcome back!</div> -->
+
+<div style="text-align:center; margin-top: 50px;">
+
+  <!-- Show this only if user is logged in -->
+  <div *ngIf="isLoggedIn; else loginForm">
+    <h2>Welcome back, User!</h2>
+    <p>You are now logged in.</p>
+    <button (click)="logout()">Logout</button>
+  </div>
+
+  <!-- Login Form shown if NOT logged in -->
+  <ng-template #loginForm>
+    <h2>Please Log In</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <br><br>
+    <button (click)="login()">Login</button>
+  </ng-template>
+
+</div>
+<p appTextColor> This paragraph has blue text from a custome directive!</p>
